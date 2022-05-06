@@ -1,3 +1,10 @@
 body {
-    background-color: rgb(154, 155, 201);
+    background-color: rgb(143, 145, 218);
+}
+nav {background-color: rgb(155, 155, 155);}
+
+.container {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: row;
 }
