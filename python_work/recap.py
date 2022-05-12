@@ -148,15 +148,17 @@ import random
 #         print( result,"An odd number!")
 # phrase_check ()
 
-#TASK 2
+#TASK 1
 
-alphabet =["a","b","c","d","e","f","g","h","i","j","k","l","m","o","P","q","r","s","t","u","v","w","x","y","z"
-]
+# def start_program():
 
-for i in alphabet:
-    print (i)
-rand_num = (int)(input("pick a number??"))
+#     user_input=
 
 
-def rand_letter():
-    rand_letter=input("pleas")
+#-----------------------------------
+
+
+
+
+
+
