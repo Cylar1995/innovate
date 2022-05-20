@@ -1,14 +1,33 @@
-from flask import render_template, redirect
+from flask import render_template, redirect , url_for, Blueprint
 
-from app import app
+my_view= Blueprint ('my_view', __name__)
 
-@app.route("/")
+@my_view.route("/")
 def home():
-    return "index.html"
+    return render_template ("index.html")
 
-if __name__ == "__main__":
-    app.run(debug=True, port=7890)
+@my_view.route("/pageone")
+def pageone():
+    return render_template ("page_one.html")
 
-@app.errorhandler (404)
-def page_not_found(e):
-    render_template("404error.html", e=e)
+@my_view.route("/pagetwo")
+def pagetwo():
+    return render_template ("pagetwo.html")
+
+@my_view.route("/pagethree")
+def pagethree():
+    return render_template ("pagethree.html")
+
+@my_view.route("/pagefour")
+def pagefour():
+    return render_template ("pagefour.html")
+
+@my_view.route("/pagefive")
+def pagefive():
+    return render_template ("pagefive.html")
+
+@my_view.route("/home")
+@my_view.route("/js")
+@my_view.route("/javascript")
+def homeredirect():
+    return redirect(url_for("my_view.home"))
